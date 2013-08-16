@@ -8,3 +8,4 @@ description   'Puppet module for managing Puppet'
 project_page  'https://github.com/alphagov/puppet-puppet'
 
 dependency 'puppetlabs/stdlib', '>= 3.0.0'
+dependency 'ploperations/puppetlabs_apt', '>= 0'

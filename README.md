@@ -1,8 +1,9 @@
 # puppet
 
-Puppet module for puppet.
+Manages puppet packages and provides a cronjob which can configure the
+puppet run every 30 mins
 
-Very simple at the moment.
+This modules supports puppet package 3.0.
 
 ## Example usage
 

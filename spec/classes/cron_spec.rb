@@ -13,7 +13,18 @@ describe 'puppet' do
     it { should contain_cron('puppet').with_ensure('absent') }
   end
 
-  context 'should configure cron resource with command' do
+  context 'should configure cron resource with default command' do
+    let(:params) {{
+      :cron_ensure => 'present',
+    }}
+
+    it { should contain_cron('puppet').with({
+      :ensure  => 'present',
+      :command => 'puppet agent --onetime --no-daemonize',
+    })}
+  end
+
+  context 'should configure cron resource with custom command' do
     let(:params) {{
       :cron_ensure  => 'present',
       :cron_command => '/opt/puppet/tools/puppet-apply',

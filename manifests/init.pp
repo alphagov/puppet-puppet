@@ -18,13 +18,13 @@
 #
 # [*cron_command]
 #   String passed to cron resource to configure the command that job runs
-#   Default: undef
+#   Default: 'puppet agent --onetime --no-daemonize'
 #
 class puppet (
   $puppet_ensure = 'present',
   $facter_ensure = 'present',
   $cron_ensure = 'absent',
-  $cron_command =  undef
+  $cron_command = 'puppet agent --onetime --no-daemonize'
 ) {
 
   if ($::osfamily != 'Debian') {

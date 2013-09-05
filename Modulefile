@@ -1,5 +1,5 @@
 name          'gdsoperations-puppet'
-version       '0.0.2'
+version       '0.1.0'
 source        'https://github.com/alphagov/puppet-puppet'
 author        'Government Digital Service'
 license       'MIT'

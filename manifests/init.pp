@@ -13,11 +13,13 @@
 #   Default: 'present'
 #
 # [*cron_ensure*]
-# String passed to cron resource to make sure that it is present or not
+#   String passed to cron resource to make sure that it is present or not
+#   Default: 'absent'
 #
 # [*cron_command]
-# String passed to cron resournce to configure the command that job runs
-
+#   String passed to cron resource to configure the command that job runs
+#   Default: undef
+#
 class puppet (
   $puppet_ensure = 'present',
   $facter_ensure = 'present',

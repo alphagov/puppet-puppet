@@ -1,9 +1,10 @@
 # puppet
 
-Manages puppet packages and provides a cronjob which can configure the
-puppet run every 30 mins
+Manages the installation of Puppet and it's dependencies from the official
+Debian packages. Optionally, it can also setup a cronjob to run Puppet every
+30 minutes.
 
-This modules supports puppet package 3.0.
+Only supports Puppet 3.x and later due to bugs in `fqdn_rand()`.
 
 ## Example usage
 

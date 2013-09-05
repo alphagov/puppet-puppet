@@ -1,17 +1,18 @@
 # == Class puppet::cron
 #
-
-class puppet::cron(
-) {
+# This class should not be called directly.
+#
+class puppet::cron {
   $cron_command = $::puppet::cron_command
   $cron_ensure = $::puppet::cron_ensure
-  $first = fqdn_rand(30)
-  $second = $first + 30
+
+  $minute_one = fqdn_rand(30)
+  $minute_two = $minute_one + 30
 
   cron { 'puppet':
     ensure  => $cron_ensure,
     user    => 'root',
-    minute  => [$first, $second],
+    minute  => [$minute_one, $minute_two],
     command => $cron_command,
   }
 }

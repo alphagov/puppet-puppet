@@ -1,6 +1,6 @@
 # puppet
 
-Manages the installation of Puppet and it's dependencies from the official
+Manages the installation of Puppet and its dependencies from the official
 Debian packages. Optionally, it can also setup a cronjob to run Puppet every
 30 minutes.
 
